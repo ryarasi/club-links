@@ -77,6 +77,11 @@ button:hover,
 /* Brand Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.button.button-meetup {
+  color: red;
+  background-color: white;
+}
+
 /* Default (this is great for your own brand color!) */
 .button.button-default {
   color: #ffffff;
