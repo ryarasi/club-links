@@ -82,6 +82,22 @@ button:hover,
   background-color: white;
 }
 
+.button.button-meetup:hover,
+.button.button-meetup:focus {
+  filter: brightness(90%);
+}
+
+/* Default (this is great for your own brand color!) */
+.button.button-interview {
+  color: #000;
+  background-color: #fff;
+}
+
+.button.button-interview:hover,
+.button.button-default:focus {
+  filter: brightness(90%);
+}
+
 /* Default (this is great for your own brand color!) */
 .button.button-default {
   color: #ffffff;
