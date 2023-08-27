@@ -77,6 +77,39 @@ button:hover,
 /* Brand Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.button.button-blackwhite {
+  color: black;
+  background-color: white;
+  border: solid 1px black;
+}
+
+.button.button-blackwhite:hover,
+.button.button-blackwhite:focus {
+  filter: brightness(90%);
+}
+
+.button.button-whiteblack {
+  color: white;
+  background-color: black;
+  border: solid 1px white;
+}
+
+.button.button-whiteblack:hover,
+.button.button-whiteblack:focus {
+  filter: brightness(90%);
+}
+
+.button.button-yellowblack {
+  color: #f1cf3b;
+  background-color: black;
+  border: solid 1px #f1cf3b;
+}
+
+.button.button-yellowblack:hover,
+.button.button-yellowblack:focus {
+  filter: brightness(90%);
+}
+
 .button.button-meetup {
   color: red;
   background-color: white;
@@ -90,7 +123,7 @@ button:hover,
 /* Default (this is great for your own brand color!) */
 .button.button-interview {
   color: #000;
-  background-color: #fff;
+  background-color: #f1cf3b;
 }
 
 .button.button-interview:hover,
