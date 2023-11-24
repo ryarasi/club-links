@@ -94,6 +94,12 @@ button:hover,
   border: solid 1px white;
 }
 
+.button.button-discord {
+  color: white;
+  background-color: #5865F2;
+  border: solid 1px white;
+}
+
 .button.button-whiteblack:hover,
 .button.button-whiteblack:focus {
   filter: brightness(90%);
