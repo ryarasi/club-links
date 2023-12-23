@@ -77,6 +77,18 @@ button:hover,
 /* Brand Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.button.google-form {
+  color: #671BC7;
+  background-color: white;
+  border: solid 1px #671BC7;
+}
+
+.button.google-form:hover,
+.button.google-form:focus {
+  filter: brightness(90%);
+}
+
+
 .button.button-blackwhite {
   color: black;
   background-color: white;
