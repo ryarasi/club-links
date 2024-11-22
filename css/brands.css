@@ -110,6 +110,17 @@ button:hover,
   filter: brightness(90%);
 }
 
+.button.button-blackyellow {
+  color: black;
+  background-color: #f1cf3b;
+  border: solid 1px #000;
+}
+
+.button.button-blackyellow:hover,
+.button.button-blackyellow:focus {
+  filter: brightness(90%);
+}
+
 .button.button-meetup {
   color: red;
   background-color: white;
