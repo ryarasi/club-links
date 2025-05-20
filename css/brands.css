@@ -26,6 +26,16 @@
 
 */
 
+
+#notice {
+  background: rgba(255, 0, 0, 0.3);
+  text-align: left;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
