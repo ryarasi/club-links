@@ -1,7 +1,7 @@
 ---
 interface Props {
   href: string;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "tinted";
   external?: boolean;
   ariaLabel?: string;
   class?: string;
@@ -23,6 +23,8 @@ const styles: Record<string, string> = {
     "bg-[color:var(--color-ink)] text-white hover:bg-[#1f2630]",
   ghost:
     "border border-[color:var(--color-line)] text-[color:var(--color-ink)] hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]",
+  tinted:
+    "bg-[color:var(--color-accent-soft)] text-[color:var(--color-accent)] border border-[color:var(--color-accent)]/30 hover:bg-[color:var(--color-accent)] hover:text-white hover:border-[color:var(--color-accent)]",
 };
 ---
 

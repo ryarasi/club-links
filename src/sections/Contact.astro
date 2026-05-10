@@ -31,10 +31,17 @@ const primary = [
   },
 ];
 
-const secondary = [
+type SecondaryLink = {
+  label: string;
+  href: string;
+  brand?: "reddit" | "discord";
+  glyphColor?: string;
+};
+
+const secondary: SecondaryLink[] = [
   { label: "Email", href: "mailto:thedebateclub.info@gmail.com" },
-  { label: "Reddit", href: "https://www.reddit.com/r/TheDebateClubIndia/" },
-  { label: "Discord", href: "https://discord.gg/vRbkcmuAys" },
+  { label: "Reddit", href: "https://www.reddit.com/r/TheDebateClubIndia/", brand: "reddit", glyphColor: "text-[#FF4500]" },
+  { label: "Discord", href: "https://discord.gg/vRbkcmuAys", brand: "discord", glyphColor: "text-[#5865F2]" },
 ];
 
 const topicForm = "https://forms.gle/xggwN2CQ7VmA6dkr8";
@@ -112,8 +119,9 @@ const volunteerForm = "https://forms.gle/h9XLrPpHwhzxjAtL6";
           href={l.href}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3.5 py-1.5 text-[13.5px] font-medium text-[color:var(--color-ink-muted)] hover:text-[color:var(--color-accent)] hover:border-[color:var(--color-accent)] no-underline transition-colors"
+          class="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3.5 py-1.5 text-[13.5px] font-medium text-[color:var(--color-ink-muted)] hover:text-[color:var(--color-accent)] hover:border-[color:var(--color-accent)] no-underline transition-colors"
         >
+          {l.brand && <BrandIcon brand={l.brand} size={14} class={l.glyphColor ?? ""} />}
           {l.label}
         </a>
       ))}

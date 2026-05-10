@@ -5,6 +5,7 @@ import BrandIcon from "../components/BrandIcon.astro";
 const whatsappUrl = "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M";
 const meetupUrl = "https://www.meetup.com/the-debate-club/";
 const youtubeUrl = "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw";
+const topicForm = "https://forms.gle/xggwN2CQ7VmA6dkr8";
 ---
 
 <section id="home" class="scroll-mt-20">
@@ -32,6 +33,12 @@ const youtubeUrl = "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw";
           <BrandIcon brand="whatsapp" size={16} />
           Join Community
         </Button>
+        <Button href={topicForm} variant="tinted" ariaLabel="Suggest a debate topic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.7.5 1 1.3 1 2.1V18h6v-1.2c0-.8.3-1.6 1-2.1A7 7 0 0 0 12 2Z" />
+          </svg>
+          Suggest a topic
+        </Button>
         <Button href={meetupUrl} variant="ghost">
           <BrandIcon brand="meetup" size={16} class="text-[#ED1C40]" />
           See upcoming debates
@@ -41,6 +48,11 @@ const youtubeUrl = "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw";
           Watch recordings
         </Button>
       </div>
+
+      <p class="mt-4 text-[14px] text-[color:var(--color-ink-soft)] max-w-[44rem]">
+        <span class="font-semibold text-[color:var(--color-ink-muted)]">The community picks the topics.</span>
+        Anyone can <a href={topicForm} target="_blank" rel="noopener noreferrer" class="font-semibold">submit one</a> — we run polls in WhatsApp, the winners get scheduled.
+      </p>
 
       <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-[44rem]">
         <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
