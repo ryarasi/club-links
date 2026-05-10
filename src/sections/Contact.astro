@@ -1,0 +1,112 @@
+---
+import Section from "../components/Section.astro";
+
+const primary = [
+  {
+    label: "WhatsApp Community",
+    sub: "Where polls, scheduling, and live sessions happen. The fastest way in.",
+    href: "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M",
+    cta: "Join community",
+    accent: true,
+  },
+  {
+    label: "Email",
+    sub: "thedebateclub.info@gmail.com",
+    href: "mailto:thedebateclub.info@gmail.com",
+    cta: "Email us",
+    accent: false,
+  },
+  {
+    label: "Meetup",
+    sub: "RSVP to the next Saturday session and see the upcoming schedule.",
+    href: "https://www.meetup.com/the-debate-club/",
+    cta: "View schedule",
+    accent: false,
+  },
+];
+
+const secondary = [
+  { label: "Reddit", href: "https://www.reddit.com/r/TheDebateClubIndia/" },
+  { label: "Discord", href: "https://discord.gg/vRbkcmuAys" },
+  { label: "YouTube", href: "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw" },
+  { label: "Past debates (Drive)", href: "https://drive.google.com/drive/folders/11NuVE_N_gmAKYyVbOaN9F9LW017ip4oX?usp=sharing" },
+];
+
+const topicForm = "https://forms.gle/xggwN2CQ7VmA6dkr8";
+const volunteerForm = "https://forms.gle/h9XLrPpHwhzxjAtL6";
+---
+
+<Section
+  id="contact"
+  eyebrow="Contact"
+  title="Get involved."
+  intro="The single best way to join is to drop into our WhatsApp community — that's where everything happens. Email and Meetup are both open too."
+>
+  <div class="grid sm:grid-cols-3 gap-5">
+    {primary.map((c) => (
+      <a
+        href={c.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class={`group block rounded-2xl border p-6 sm:p-7 no-underline transition-colors ${
+          c.accent
+            ? "bg-[color:var(--color-accent)] border-[color:var(--color-accent)] text-white hover:bg-[color:var(--color-accent-hover)]"
+            : "bg-[color:var(--color-bg-elev)] border-[color:var(--color-line)] hover:border-[color:var(--color-accent)]"
+        }`}
+      >
+        <div class={`text-[12px] tracking-[0.14em] uppercase font-semibold mb-2 ${c.accent ? "text-white/80" : "text-[color:var(--color-accent)]"}`}>
+          {c.label}
+        </div>
+        <div class={`text-[15.5px] leading-relaxed ${c.accent ? "text-white/95" : "text-[color:var(--color-ink-muted)]"}`}>
+          {c.sub}
+        </div>
+        <div class={`mt-5 inline-flex items-center gap-1 text-[14px] font-semibold ${c.accent ? "text-white" : "text-[color:var(--color-accent)]"}`}>
+          {c.cta}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="mt-12 grid lg:grid-cols-2 gap-5">
+    <div class="rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-6 sm:p-7">
+      <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-accent)] font-semibold mb-2">Suggest a topic</div>
+      <h3 class="text-xl font-bold tracking-tight">Propose what we should debate next</h3>
+      <p class="mt-2 text-[15px] text-[color:var(--color-ink-muted)] leading-relaxed">
+        Anyone can propose a topic. We collect suggestions, post community polls, and schedule the highest-voted topics on Meetup.
+      </p>
+      <a href={topicForm} target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-1 text-[14px] font-semibold">
+        Open the suggestion form →
+      </a>
+    </div>
+
+    <div class="rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-6 sm:p-7">
+      <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-accent)] font-semibold mb-2">Volunteer</div>
+      <h3 class="text-xl font-bold tracking-tight">Help us run the community</h3>
+      <p class="mt-2 text-[15px] text-[color:var(--color-ink-muted)] leading-relaxed">
+        Want to moderate sessions, help with scheduling, or pitch in on outreach? We'd love your help.
+      </p>
+      <a href={volunteerForm} target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-1 text-[14px] font-semibold">
+        Open the volunteer form →
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-12">
+    <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-3">Also on</div>
+    <div class="flex flex-wrap gap-2.5">
+      {secondary.map((l) => (
+        <a
+          href={l.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3.5 py-1.5 text-[13.5px] font-medium text-[color:var(--color-ink-muted)] hover:text-[color:var(--color-accent)] hover:border-[color:var(--color-accent)] no-underline transition-colors"
+        >
+          {l.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</Section>

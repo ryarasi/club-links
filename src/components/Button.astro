@@ -1,0 +1,36 @@
+---
+interface Props {
+  href: string;
+  variant?: "primary" | "secondary" | "ghost";
+  external?: boolean;
+  ariaLabel?: string;
+  class?: string;
+}
+const {
+  href,
+  variant = "primary",
+  external = true,
+  ariaLabel,
+  class: className = "",
+} = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center gap-2 rounded-full font-semibold no-underline transition-colors px-5 py-2.5 text-[14.5px]";
+const styles: Record<string, string> = {
+  primary:
+    "bg-[color:var(--color-accent)] text-white hover:bg-[color:var(--color-accent-hover)]",
+  secondary:
+    "bg-[color:var(--color-ink)] text-white hover:bg-[#1f2630]",
+  ghost:
+    "border border-[color:var(--color-line)] text-[color:var(--color-ink)] hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]",
+};
+---
+
+<a
+  href={href}
+  class={`${base} ${styles[variant]} ${className}`}
+  aria-label={ariaLabel}
+  {...external ? { target: "_blank", rel: "noopener noreferrer" } : {}}
+>
+  <slot />
+</a>

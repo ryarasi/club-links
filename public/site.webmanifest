@@ -1,0 +1,14 @@
+{
+  "name": "The Debate Club",
+  "short_name": "Debate Club",
+  "description": "A neutral platform for civil public discourse. Live online voice debates every Saturday 11am IST.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#fafaf7",
+  "theme_color": "#1a6b6b",
+  "icons": [
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/images/logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

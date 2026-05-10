@@ -1,0 +1,20 @@
+{
+  "name": "the-debate-club",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Debate Club — a community for civil public discourse. Weekly online voice debates every Saturday 11am IST.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --host",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "^5.14.1",
+    "tailwindcss": "^4.1.13"
+  }
+}

@@ -1,0 +1,150 @@
+---
+interface Article {
+  title: string;
+  description: string;
+  datePublished: string;
+  slug: string;
+}
+
+interface Props {
+  home?: boolean;
+  article?: Article;
+  siteUrl: string;
+}
+
+const { home = false, article, siteUrl } = Astro.props;
+
+const organization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "The Debate Club",
+  alternateName: "TheDebateClub",
+  url: siteUrl,
+  logo: `${siteUrl}/images/logo.png`,
+  email: "thedebateclub.info@gmail.com",
+  description:
+    "A neutral community platform for civil public discourse. Live online voice debates every Saturday at 11am IST.",
+  sameAs: [
+    "https://www.meetup.com/the-debate-club/",
+    "https://www.reddit.com/r/TheDebateClubIndia/",
+    "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M",
+    "https://discord.gg/vRbkcmuAys",
+    "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw",
+  ],
+};
+
+const event = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "The Debate Club — Weekly Live Debate",
+  description:
+    "An open, voice-based debate session on a community-selected topic. Anyone can join, listen, or speak.",
+  eventSchedule: {
+    "@type": "Schedule",
+    repeatFrequency: "P1W",
+    byDay: "https://schema.org/Saturday",
+    startTime: "11:00",
+    endTime: "12:30",
+    scheduleTimezone: "Asia/Kolkata",
+  },
+  eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  location: {
+    "@type": "VirtualLocation",
+    url: "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M",
+  },
+  organizer: { "@type": "Organization", name: "The Debate Club", url: siteUrl },
+  isAccessibleForFree: true,
+  inLanguage: "en",
+  audience: { "@type": "Audience", audienceType: "General public" },
+};
+
+const faq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is The Debate Club?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Debate Club is a community for anyone interested in participating in civil discourse through open debates. We operate primarily on our WhatsApp community and run live online voice sessions every Saturday at 11am IST.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When and where do you meet?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We meet every Saturday at 11am Indian Standard Time (IST) for a live online voice session. The schedule is published on our Meetup page at https://www.meetup.com/the-debate-club/.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How are debate topics chosen?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Anyone can suggest a topic via our topic-suggestion form. We periodically post polls in our WhatsApp group, members vote, and we schedule the upcoming Saturday sessions on Meetup based on the winning topics.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I join?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Join our WhatsApp Community at https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M. That's where polls, scheduling, and member discussions happen.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need debate experience?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. The Debate Club is open to anyone interested in civil public discourse, regardless of prior debate experience. You're welcome to join, listen, and speak whenever you're comfortable.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is The Debate Club free?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The Debate Club is free to join and participate in. We are a neutral community platform, not a commercial product.",
+      },
+    },
+  ],
+};
+
+const articleLd = article
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: article.title,
+      description: article.description,
+      datePublished: article.datePublished,
+      author: { "@type": "Organization", name: "The Debate Club", url: siteUrl },
+      publisher: {
+        "@type": "Organization",
+        name: "The Debate Club",
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/images/logo.png`,
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/blog/${article.slug}/`,
+      },
+    }
+  : null;
+---
+
+{home && (
+  <>
+    <script type="application/ld+json" set:html={JSON.stringify(organization)} />
+    <script type="application/ld+json" set:html={JSON.stringify(event)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faq)} />
+  </>
+)}
+{articleLd && (
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
+)}

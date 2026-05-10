@@ -1,0 +1,37 @@
+---
+interface Props {
+  id: string;
+  eyebrow?: string;
+  title?: string;
+  intro?: string;
+  /** Optional contrast background. */
+  tone?: "default" | "soft";
+}
+const { id, eyebrow, title, intro, tone = "default" } = Astro.props;
+const bg = tone === "soft" ? "bg-[color:var(--color-bg-elev)]" : "";
+---
+
+<section id={id} class={`scroll-mt-20 ${bg}`}>
+  <div class="mx-auto max-w-[1120px] px-5 sm:px-8 py-16 sm:py-24">
+    {(eyebrow || title || intro) && (
+      <header class="max-w-[42rem] mb-10 sm:mb-14">
+        {eyebrow && (
+          <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-accent)] font-semibold mb-3">
+            {eyebrow}
+          </div>
+        )}
+        {title && (
+          <h2 class="text-3xl sm:text-[2.25rem] font-bold leading-tight tracking-tight">
+            {title}
+          </h2>
+        )}
+        {intro && (
+          <p class="mt-4 text-[17px] text-[color:var(--color-ink-muted)] leading-relaxed">
+            {intro}
+          </p>
+        )}
+      </header>
+    )}
+    <slot />
+  </div>
+</section>

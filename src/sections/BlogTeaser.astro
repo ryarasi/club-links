@@ -1,0 +1,33 @@
+---
+import Section from "../components/Section.astro";
+import BlogCard from "../components/BlogCard.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => +new Date(b.data.date) - +new Date(a.data.date));
+---
+
+<Section
+  id="blog"
+  eyebrow="Blog"
+  title="Updates from the community."
+  intro="Announcements, recaps, and notes on what we're learning as we go."
+  tone="soft"
+>
+  {posts.length === 0 ? (
+    <p class="text-[color:var(--color-ink-muted)]">No posts yet — check back soon.</p>
+  ) : (
+    <div class="grid sm:grid-cols-2 gap-5">
+      {posts.map((p) => (
+        <BlogCard
+          href={`/blog/${p.slug}/`}
+          title={p.data.title}
+          date={p.data.date.toISOString()}
+          excerpt={p.data.excerpt}
+          tags={p.data.tags}
+        />
+      ))}
+    </div>
+  )}
+</Section>

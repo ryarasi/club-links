@@ -1,0 +1,49 @@
+---
+import Button from "../components/Button.astro";
+
+const whatsappUrl = "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M";
+const meetupUrl = "https://www.meetup.com/the-debate-club/";
+---
+
+<section id="home" class="scroll-mt-20">
+  <div class="mx-auto max-w-[1120px] px-5 sm:px-8 pt-16 sm:pt-24 pb-14 sm:pb-20">
+    <div class="max-w-[44rem]">
+      <div class="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3 py-1 text-[12px] font-semibold tracking-wide uppercase text-[color:var(--color-accent)] mb-7">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full rounded-full bg-[color:var(--color-accent)] opacity-50 animate-ping"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-accent)]"></span>
+        </span>
+        Live again — every Saturday, 11am IST
+      </div>
+
+      <h1 class="text-[2.25rem] sm:text-[3.25rem] leading-[1.05] font-bold tracking-tight">
+        A neutral platform for
+        <span class="text-[color:var(--color-accent)]">civil public discourse.</span>
+      </h1>
+
+      <p class="mt-6 text-[18px] sm:text-[19px] text-[color:var(--color-ink-muted)] leading-relaxed">
+        The Debate Club is a community for anyone who wants to participate in open, civil debate — not just consume it. We meet online for live voice debates every Saturday at 11am IST on community-suggested, member-voted topics.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <Button href={whatsappUrl} variant="primary">Join the WhatsApp Community</Button>
+        <Button href={meetupUrl} variant="ghost">See upcoming debates →</Button>
+      </div>
+
+      <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-[44rem]">
+        <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
+          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">When</div>
+          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">Saturdays · 11am IST</div>
+        </div>
+        <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
+          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Where</div>
+          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">WhatsApp · live voice</div>
+        </div>
+        <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
+          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Cost</div>
+          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">Free · open to all</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
