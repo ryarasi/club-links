@@ -7,13 +7,13 @@ tags: ["announcement", "community"]
 
 After a long pause, The Debate Club is back.
 
-Starting **Saturday, May 16, 2026 at 11am IST**, we are resuming our weekly live voice debates. The format is the same as before — community-suggested topics, member-voted, debated openly on a live voice call. The only thing that's changed is that we now treat this site as the single source of truth for everything: when we meet, how topics are picked, where to listen, and how to get involved.
+Starting **Saturday, May 16, 2026 at 11am IST**, we are resuming our weekly live voice debates. The format is the same as before — community-suggested topics, member-voted, debated openly on a live Zoom call. The only thing that's changed is that we now treat this site as the single source of truth for everything: when we meet, how topics are picked, where to listen, and how to get involved.
 
 ## What we're doing
 
-Every Saturday at 11am Indian Standard Time, we'll meet for a live voice debate on a topic the community has chosen. The session lasts roughly an hour and a half. Anyone can listen. Anyone can speak.
+Every Saturday at 11am Indian Standard Time, we'll meet on Zoom for a live voice debate on a topic the community has chosen. The session lasts roughly an hour and a half. Anyone can listen. Anyone can speak.
 
-The full schedule lives on our [Meetup page](https://www.meetup.com/the-debate-club/). RSVP there if you'd like a reminder.
+The full schedule lives on our [Meetup page](https://www.meetup.com/the-debate-club/) — that's also where the **Zoom link** for each upcoming debate gets posted. RSVP there if you'd like a reminder.
 
 ## How topics are chosen
 
@@ -21,8 +21,8 @@ We don't pick topics ourselves. The flow is:
 
 1. **You suggest a topic** — anyone can fill out our [topic-suggestion form](https://forms.gle/xggwN2CQ7VmA6dkr8).
 2. **The community votes** — we periodically post polls in our WhatsApp group, and members vote on which suggestions to take up.
-3. **The winners get scheduled** — based on poll results, we publish the upcoming Saturday sessions on Meetup.
-4. **We debate it live** — Saturday, 11am IST, on our WhatsApp community.
+3. **The winners get scheduled** — based on poll results, we publish the upcoming Saturday sessions on Meetup, with the Zoom link attached.
+4. **We debate it live** — Saturday, 11am IST, on Zoom.
 
 If you have something you'd like the community to debate, send it through. The form takes about a minute.
 
@@ -34,7 +34,7 @@ We don't think that's healthy, and we don't think it has to be that way. The Deb
 
 ## How to join
 
-The fastest way in is the [WhatsApp Community](https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M). That's where polls, scheduling, and live sessions all happen. If you'd rather start with email, we're at [thedebateclub.info@gmail.com](mailto:thedebateclub.info@gmail.com).
+The fastest way in is the [WhatsApp Community](https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M) — that's where the day-to-day chat, topic polls, and announcements happen. To actually attend a debate, RSVP to the next session on our [Meetup page](https://www.meetup.com/the-debate-club/); the Zoom link is posted on each event. If you'd rather start with email, we're at [thedebateclub.info@gmail.com](mailto:thedebateclub.info@gmail.com).
 
 See you Saturday.
 

@@ -23,7 +23,7 @@ const organization = {
   logo: `${siteUrl}/images/logo.png`,
   email: "thedebateclub.info@gmail.com",
   description:
-    "A neutral community platform for civil public discourse. Live online voice debates every Saturday at 11am IST.",
+    "A neutral community platform for civil public discourse. Live voice debates on Zoom every Saturday at 11am IST; community chat on WhatsApp; schedule on Meetup.",
   sameAs: [
     "https://www.meetup.com/the-debate-club/",
     "https://www.reddit.com/r/TheDebateClubIndia/",
@@ -38,7 +38,7 @@ const event = {
   "@type": "Event",
   name: "The Debate Club — Weekly Live Debate",
   description:
-    "An open, voice-based debate session on a community-selected topic. Anyone can join, listen, or speak.",
+    "An open, voice-based debate on a community-selected topic, held live on Zoom. Anyone can join, listen, or speak. The Zoom link for each session is posted on the corresponding Meetup event.",
   eventSchedule: {
     "@type": "Schedule",
     repeatFrequency: "P1W",
@@ -51,7 +51,8 @@ const event = {
   eventStatus: "https://schema.org/EventScheduled",
   location: {
     "@type": "VirtualLocation",
-    url: "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M",
+    name: "Zoom (link posted on Meetup event)",
+    url: "https://www.meetup.com/the-debate-club/",
   },
   organizer: { "@type": "Organization", name: "The Debate Club", url: siteUrl },
   isAccessibleForFree: true,
@@ -68,7 +69,7 @@ const faq = {
       name: "What is The Debate Club?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Debate Club is a community for anyone interested in participating in civil discourse through open debates. We operate primarily on our WhatsApp community and run live online voice sessions every Saturday at 11am IST.",
+        text: "The Debate Club is a community for anyone interested in participating in civil discourse through open debates. Our community lives on WhatsApp, and we run a live voice debate on Zoom every Saturday at 11am IST.",
       },
     },
     {
@@ -76,7 +77,7 @@ const faq = {
       name: "When and where do you meet?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We meet every Saturday at 11am Indian Standard Time (IST) for a live online voice session. The schedule is published on our Meetup page at https://www.meetup.com/the-debate-club/.",
+        text: "We meet every Saturday at 11am Indian Standard Time (IST) on Zoom. The Zoom link for each session is posted on the corresponding event on our Meetup page (https://www.meetup.com/the-debate-club/), where you can also see the upcoming schedule and RSVP.",
       },
     },
     {
@@ -92,7 +93,7 @@ const faq = {
       name: "How do I join?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Join our WhatsApp Community at https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M. That's where polls, scheduling, and member discussions happen.",
+        text: "Start by joining our WhatsApp Community at https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M — that's where polls, topic discussions, and announcements happen. To attend a live debate, RSVP to the upcoming session on our Meetup page; the Zoom link is posted there.",
       },
     },
     {

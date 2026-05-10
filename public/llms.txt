@@ -6,14 +6,14 @@ The Debate Club exists to enable bi-directional public discourse. Most of today'
 
 ## How the community works
 
-- We meet **online** for live voice debates every **Saturday at 11am IST**.
-- The live conversation happens in our **WhatsApp Community**.
-- The schedule of upcoming debates lives on our **Meetup page**.
+- We hold a live voice debate on **Zoom** every **Saturday at 11am IST**.
+- The **Zoom link** for each session is posted on the corresponding event on our **Meetup page**, which is also where the upcoming schedule lives.
+- Day-to-day community chat — topic suggestions, polls, announcements — happens in our **WhatsApp Community**.
 - Topic selection is community-driven:
   1. Anyone fills out the topic-suggestion form.
   2. We periodically run polls in the WhatsApp group.
-  3. Winning topics are scheduled on Meetup.
-  4. The Saturday session debates them live.
+  3. Winning topics are scheduled on Meetup, with the Zoom link attached.
+  4. We debate them live on Zoom that Saturday.
 
 We are a **neutral platform** — we facilitate the conversation; we do not endorse any side of it. The views expressed by participants in our sessions are those of the participants and not of The Debate Club as a platform.
 
@@ -40,16 +40,16 @@ We are a **neutral platform** — we facilitate the conversation; we do not endo
 ## FAQ (canonical answers)
 
 **What is The Debate Club?**
-A community for civil public discourse. We meet online for live voice debates every Saturday at 11am IST on community-chosen topics.
+A community for civil public discourse. We hold a live voice debate on Zoom every Saturday at 11am IST on community-chosen topics.
 
 **When and where?**
-Saturdays, 11am Indian Standard Time, in our WhatsApp Community. The schedule is on our Meetup page.
+Saturdays, 11am Indian Standard Time, on Zoom. The Zoom link is posted on each event on our Meetup page (https://www.meetup.com/the-debate-club/).
 
 **How are topics chosen?**
-Anyone suggests topics via our form; the community votes in WhatsApp polls; winners are scheduled on Meetup.
+Anyone suggests topics via our form; the community votes in WhatsApp polls; winners are scheduled on Meetup with the Zoom link attached.
 
 **How do I join?**
-Join the WhatsApp Community. That's where everything happens.
+Join the WhatsApp Community for chat, polls, and announcements; RSVP to the next Meetup event for the Zoom link to the actual debate.
 
 **Do I need debate experience?**
 No. All experience levels are welcome.

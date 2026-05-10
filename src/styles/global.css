@@ -28,28 +28,32 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  background: var(--color-bg);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  font-feature-settings: "ss01", "cv11";
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
+@layer base {
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  letter-spacing: -0.015em;
-  line-height: 1.18;
-  color: var(--color-ink);
-}
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    line-height: 1.18;
+    color: var(--color-ink);
+  }
 
-a {
-  color: var(--color-accent);
-  text-underline-offset: 3px;
-}
-a:hover {
-  color: var(--color-accent-hover);
+  /* Default link color applies only to anchors with no class —
+     keeps Tailwind utility classes (e.g. text-white on CTAs) winning. */
+  a:not([class]) {
+    color: var(--color-accent);
+    text-underline-offset: 3px;
+  }
+  a:not([class]):hover {
+    color: var(--color-accent-hover);
+  }
 }
 
 ::selection {
