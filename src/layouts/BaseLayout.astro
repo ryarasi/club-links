@@ -23,7 +23,7 @@ interface Props {
 
 const {
   title = "The Debate Club — Civil Public Discourse, Every Saturday",
-  description = "The Debate Club is a community for civil public discourse. We meet online for live voice debates every Saturday at 11am IST. Suggest topics, vote in polls, join the conversation.",
+  description = "A neutral community for civil public discourse. Live voice debates on Zoom every Saturday at 11am IST — community-suggested, member-voted topics. Join the WhatsApp community to participate.",
   ogImage = "/og-image.png",
   pageType = "website",
   homeStructuredData = false,
@@ -34,6 +34,8 @@ const {
 const siteUrl = "https://thedebateclub.info";
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).toString();
 const ogImageUrl = new URL(ogImage, siteUrl).toString();
+const ogImageSquareUrl = new URL("/og-image-square.png", siteUrl).toString();
+const ogImageAlt = "The Debate Club — civil public discourse, every Saturday";
 ---
 
 <!doctype html>
@@ -47,7 +49,7 @@ const ogImageUrl = new URL(ogImage, siteUrl).toString();
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#1a6b6b" />
+    <meta name="theme-color" content="#6768fd" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
@@ -59,17 +61,27 @@ const ogImageUrl = new URL(ogImage, siteUrl).toString();
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="The Debate Club" />
+    <meta property="og:locale" content="en_IN" />
+    <!-- Banner OG (Facebook, LinkedIn, Slack) -->
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="The Debate Club" />
-    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <!-- Square OG (WhatsApp, Telegram, iMessage often prefer square thumbnails) -->
+    <meta property="og:image" content={ogImageSquareUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content={ogImageAlt} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
