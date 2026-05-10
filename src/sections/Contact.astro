@@ -1,8 +1,10 @@
 ---
 import Section from "../components/Section.astro";
+import BrandIcon from "../components/BrandIcon.astro";
 
 const primary = [
   {
+    brand: "whatsapp" as const,
     label: "WhatsApp Community",
     sub: "Day-to-day chat, topic polls, and announcements. The fastest way in.",
     href: "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M",
@@ -10,26 +12,29 @@ const primary = [
     accent: true,
   },
   {
+    brand: "meetup" as const,
     label: "Meetup",
     sub: "RSVP to the next Saturday session — the Zoom link is posted on each event.",
     href: "https://www.meetup.com/the-debate-club/",
     cta: "View schedule",
     accent: false,
+    glyphColor: "text-[#ED1C40]",
   },
   {
-    label: "Email",
-    sub: "thedebateclub.info@gmail.com",
-    href: "mailto:thedebateclub.info@gmail.com",
-    cta: "Email us",
+    brand: "youtube" as const,
+    label: "YouTube",
+    sub: "Every session is recorded. Catch up on past debates anytime.",
+    href: "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw",
+    cta: "Watch recordings",
     accent: false,
+    glyphColor: "text-[#FF0033]",
   },
 ];
 
 const secondary = [
+  { label: "Email", href: "mailto:thedebateclub.info@gmail.com" },
   { label: "Reddit", href: "https://www.reddit.com/r/TheDebateClubIndia/" },
   { label: "Discord", href: "https://discord.gg/vRbkcmuAys" },
-  { label: "YouTube", href: "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw" },
-  { label: "Past debates (Drive)", href: "https://drive.google.com/drive/folders/11NuVE_N_gmAKYyVbOaN9F9LW017ip4oX?usp=sharing" },
 ];
 
 const topicForm = "https://forms.gle/xggwN2CQ7VmA6dkr8";
@@ -40,7 +45,7 @@ const volunteerForm = "https://forms.gle/h9XLrPpHwhzxjAtL6";
   id="contact"
   eyebrow="Contact"
   title="Get involved."
-  intro="The single best way to join is to drop into our WhatsApp community — that's where everything happens. Email and Meetup are both open too."
+  intro="The single best way to join is to drop into our WhatsApp community — that's where everything happens. Sessions are on Zoom (link via Meetup), and recordings live on YouTube."
 >
   <div class="grid sm:grid-cols-3 gap-5">
     {primary.map((c) => (
@@ -54,8 +59,13 @@ const volunteerForm = "https://forms.gle/h9XLrPpHwhzxjAtL6";
             : "bg-[color:var(--color-bg-elev)] border-[color:var(--color-line)] hover:border-[color:var(--color-accent)]"
         }`}
       >
-        <div class={`text-[12px] tracking-[0.14em] uppercase font-semibold mb-2 ${c.accent ? "text-white/80" : "text-[color:var(--color-accent)]"}`}>
-          {c.label}
+        <div class={`flex items-center gap-2 text-[12px] tracking-[0.14em] uppercase font-semibold mb-3 ${c.accent ? "text-white/85" : ""}`}>
+          <BrandIcon
+            brand={c.brand}
+            size={18}
+            class={c.accent ? "text-white" : (c.glyphColor ?? "text-[color:var(--color-accent)]")}
+          />
+          <span class={c.accent ? "" : "text-[color:var(--color-accent)]"}>{c.label}</span>
         </div>
         <div class={`text-[15.5px] leading-relaxed ${c.accent ? "text-white/95" : "text-[color:var(--color-ink-muted)]"}`}>
           {c.sub}
