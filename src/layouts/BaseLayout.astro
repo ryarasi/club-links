@@ -34,7 +34,6 @@ const {
 const siteUrl = "https://thedebateclub.info";
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).toString();
 const ogImageUrl = new URL(ogImage, siteUrl).toString();
-const ogImageSquareUrl = new URL("/og-image-square.png", siteUrl).toString();
 const ogImageAlt = "The Debate Club — civil public discourse, every Saturday";
 ---
 
@@ -63,16 +62,9 @@ const ogImageAlt = "The Debate Club — civil public discourse, every Saturday";
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="The Debate Club" />
     <meta property="og:locale" content="en_IN" />
-    <!-- Banner OG (Facebook, LinkedIn, Slack) -->
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content={ogImageAlt} />
-    <!-- Square OG (WhatsApp, Telegram, iMessage often prefer square thumbnails) -->
-    <meta property="og:image" content={ogImageSquareUrl} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="1200" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content={ogImageAlt} />
 
