@@ -16,7 +16,7 @@ const posts = (await getCollection("blog"))
   tone="soft"
 >
   {posts.length === 0 ? (
-    <p class="text-[color:var(--color-ink-muted)]">No posts yet — check back soon.</p>
+    <p class="text-[color:var(--color-ink-muted)]">No posts yet. Check back soon.</p>
   ) : (
     <div class="grid sm:grid-cols-2 gap-5">
       {posts.map((p) => (

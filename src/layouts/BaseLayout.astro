@@ -22,8 +22,8 @@ interface Props {
 }
 
 const {
-  title = "The Debate Club — Civil Public Discourse, Every Saturday",
-  description = "A neutral community for civil public discourse. Live voice debates on Zoom every Saturday at 11am IST — community-suggested, member-voted topics. Join the WhatsApp community to participate.",
+  title = "The Debate Club: Civil Public Discourse, Every Saturday",
+  description = "A neutral community for civil public discourse. Live voice debates on Zoom every Saturday at 11am IST. Topics are community-suggested and member-voted. Join the WhatsApp community to participate.",
   ogImage = "/og-image.png",
   pageType = "website",
   homeStructuredData = false,
@@ -34,7 +34,7 @@ const {
 const siteUrl = "https://thedebateclub.info";
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).toString();
 const ogImageUrl = new URL(ogImage, siteUrl).toString();
-const ogImageAlt = "The Debate Club — civil public discourse, every Saturday";
+const ogImageAlt = "The Debate Club: civil public discourse, every Saturday";
 ---
 
 <!doctype html>
@@ -48,7 +48,7 @@ const ogImageAlt = "The Debate Club — civil public discourse, every Saturday";
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#7c1d2f" />
+    <meta name="theme-color" content="#6768fd" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
