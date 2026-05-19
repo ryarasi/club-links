@@ -67,26 +67,33 @@ const linkedinUrl = "https://www.linkedin.com/company/the-startup-club-india";
 </style>
 
 <script is:inline>
-  (function () {
+  // Wait for the hero to exist in the DOM. This script lives inside <header>, which
+  // is parsed before <main>, so #hero-logo isn't reachable at script-execution time.
+  function initHeroLogoObserver() {
     const nav = document.getElementById("site-nav");
-    const heroLogo = document.getElementById("hero-logo");
-
-    // If there is no hero logo on this page (e.g. blog posts), show the nav logo always.
     if (!nav) return;
+
+    const heroLogo = document.getElementById("hero-logo");
     if (!heroLogo) {
+      // No hero on this page (e.g. blog posts) — show the nav logo always.
       nav.dataset.heroOut = "true";
       return;
     }
 
-    // Observe the hero logo. When it leaves the viewport, show the nav logo.
     const io = new IntersectionObserver(
       ([entry]) => {
         nav.dataset.heroOut = entry.isIntersecting ? "false" : "true";
       },
-      // A small negative top margin so the swap fires once the hero logo is comfortably
+      // Small negative top margin so the swap fires once the hero logo is comfortably
       // tucked under the sticky nav, not right when its bottom edge crosses zero.
       { rootMargin: "-24px 0px 0px 0px", threshold: 0 }
     );
     io.observe(heroLogo);
-  })();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initHeroLogoObserver);
+  } else {
+    initHeroLogoObserver();
+  }
 </script>
