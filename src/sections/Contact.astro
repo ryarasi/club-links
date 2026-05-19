@@ -8,15 +8,23 @@ const primary = [
     label: "LinkedIn",
     sub: "Our main channel. Daily posts across innovation, fundraising, product, founder craft, and policy.",
     href: "https://www.linkedin.com/company/the-startup-club-india",
-    cta: "Follow on LinkedIn",
+    cta: "Follow",
     accent: true,
+  },
+  {
+    brand: "youtube" as const,
+    label: "YouTube",
+    sub: "Long-form video — founder conversations, breakdowns, and event recordings.",
+    href: "https://www.youtube.com/@startupclublive",
+    cta: "Subscribe",
+    accent: false,
   },
   {
     brand: "x" as const,
     label: "X",
-    sub: "Sharp, real-time signal — what's breaking in Indian startups, who's funding what, what the discourse is.",
+    sub: "Sharp, real-time signal — what's breaking in Indian startups and who's funding what.",
     href: "https://x.com/startupclublive",
-    cta: "Follow on X",
+    cta: "Follow",
     accent: false,
   },
   {
@@ -24,9 +32,38 @@ const primary = [
     label: "Instagram",
     sub: "Visual takes on founder craft and ecosystem moments. Easier to share, easier to skim.",
     href: "https://www.instagram.com/startupclub.live/",
-    cta: "Follow on Instagram",
+    cta: "Follow",
     accent: false,
   },
+];
+
+const forms = [
+  {
+    eyebrow: "For founders",
+    title: "Request mentorship",
+    body: "Fill out the form and we'll match you with a mentor from the community based on your stage and the problem you're working through.",
+    href: "https://forms.gle/G5HDgSs9Xckac2g26",
+    cta: "Open the form",
+  },
+  {
+    eyebrow: "For founders",
+    title: "Pitch to an investor",
+    body: "Send us your one-pager. We route fits to angels and funds in the community who are actively looking at that stage and theme.",
+    href: "https://forms.gle/j8K3NPiyEVkBEsJt6",
+    cta: "Open the form",
+  },
+];
+
+type ChannelChip = {
+  brand: "meetup" | "whatsapp" | "telegram";
+  label: string;
+  href: string;
+};
+
+const channels: ChannelChip[] = [
+  { brand: "meetup", label: "Meetup", href: "https://www.meetup.com/the-startup-club/" },
+  { brand: "whatsapp", label: "WhatsApp", href: "https://chat.whatsapp.com/Keb65USjRvaAbPQby6dwt1" },
+  { brand: "telegram", label: "Telegram", href: "https://t.me/+2p31iaNtAxsyN2E1" },
 ];
 ---
 
@@ -34,9 +71,9 @@ const primary = [
   id="contact"
   eyebrow="Follow"
   title="Follow the conversation."
-  intro="Pick whichever channel you already live on — LinkedIn for the long form, X for the signal, Instagram for the visuals. We publish on all three."
+  intro="Pick whichever channel you already live on — LinkedIn for the long form, YouTube for the conversations, X for the signal, Instagram for the visuals. We publish on all of them."
 >
-  <div class="grid sm:grid-cols-3 gap-5">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
     {primary.map((c) => (
       <a
         href={c.href}
@@ -56,7 +93,7 @@ const primary = [
           />
           <span>{c.label}</span>
         </div>
-        <div class={`text-[15.5px] leading-relaxed ${c.accent ? "text-white/95" : "text-[color:var(--color-ink-muted)]"}`}>
+        <div class={`text-[15px] leading-relaxed ${c.accent ? "text-white/95" : "text-[color:var(--color-ink-muted)]"}`}>
           {c.sub}
         </div>
         <div class={`mt-5 inline-flex items-center gap-1 text-[14px] font-semibold ${c.accent ? "text-white" : "text-[color:var(--color-ink)]"}`}>
@@ -67,5 +104,38 @@ const primary = [
         </div>
       </a>
     ))}
+  </div>
+
+  <div class="mt-12 grid lg:grid-cols-2 gap-5">
+    {forms.map((f) => (
+      <div class="rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-6 sm:p-7">
+        <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-2">{f.eyebrow}</div>
+        <h3 class="text-xl font-bold tracking-tight">{f.title}</h3>
+        <p class="mt-2 text-[15px] text-[color:var(--color-ink-muted)] leading-relaxed">{f.body}</p>
+        <a href={f.href} target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-1 text-[14px] font-semibold no-underline text-[color:var(--color-ink)]">
+          {f.cta}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-12">
+    <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-3">Also on</div>
+    <div class="flex flex-wrap gap-2.5">
+      {channels.map((c) => (
+        <a
+          href={c.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3.5 py-1.5 text-[13.5px] font-medium text-[color:var(--color-ink-muted)] hover:text-[color:var(--color-ink)] hover:border-[color:var(--color-ink)] no-underline transition-colors"
+        >
+          <BrandIcon brand={c.brand} size={14} />
+          {c.label}
+        </a>
+      ))}
+    </div>
   </div>
 </Section>
