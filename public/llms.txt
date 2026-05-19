@@ -1,58 +1,56 @@
-# The Debate Club
+# The Startup Club
 
-> A neutral community platform for civil public discourse. We host live online voice debates every Saturday at 11am IST (Indian Standard Time) on community-suggested, member-voted topics. Free to join. Open to anyone.
+> A community for India's founders, investors, mentors, and ecosystem enablers. We publish daily content across innovation, fundraising, product and go-to-market, founder craft, and ecosystem and policy. Free to follow. Open to anyone building in or around Indian startups.
 
-The Debate Club exists to enable bi-directional public discourse. Most of today's public conversation runs on a broadcaster-and-consumer model — a small number of publishers push out a narrative and the rest of the audience consumes it without an avenue to shape it. We exist to flip that: a neutral facilitator where people from any perspective can show up and actually be heard, in good faith, on the topics that shape public conversation.
+The Startup Club exists because the most useful conversations about Indian startups happen between the people doing the work — founders comparing notes, investors sharing pattern-matching, mentors and operators paying forward what they learned. We publish daily across LinkedIn, X, and Instagram so those conversations have a steady home.
 
-## How the community works
+## Who it's for
 
-- We hold a live voice debate on **Zoom** every **Saturday at 11am IST**.
-- The **Zoom link** for each session is posted on the corresponding event on our **Meetup page**, which is also where the upcoming schedule lives.
-- Day-to-day community chat — topic suggestions, polls, announcements — happens in our **WhatsApp Community**.
-- Topic selection is community-driven:
-  1. Anyone fills out the topic-suggestion form.
-  2. We periodically run polls in the WhatsApp group.
-  3. Winning topics are scheduled on Meetup, with the Zoom link attached.
-  4. We debate them live on Zoom that Saturday.
+- **Early-stage founders** — building from idea or seed; looking for sharper takes on product, fundraising, and the operating decisions that compound.
+- **Aspiring entrepreneurs** — working on side projects or planning a first move.
+- **Investors** — angels, syndicate leads, and institutional folks tracking what's getting built across Indian innovation.
+- **Mentors and operators** — senior operators and ex-founders guiding portfolios, advising cohorts, or building in public.
+- **Ecosystem enablers** — incubators, accelerators, community builders, policy and academia.
 
-We are a **neutral platform** — we facilitate the conversation; we do not endorse any side of it. The views expressed by participants in our sessions are those of the participants and not of The Debate Club as a platform.
+## What we publish (five pillars)
+
+1. **Innovation (25%)** — Frontier tech, R&D breakthroughs, deep-tech and dual-use, and what's shipping out of Indian labs and garages.
+2. **Fundraising (20%)** — How rounds get built: angel and seed mechanics, term sheets, valuations, late-stage moves, and what investors are actually paying for.
+3. **Product and GTM (20%)** — Positioning, pricing, distribution, and the early-stage moves that convert a wedge into pull.
+4. **Founder and team (20%)** — Operating craft: hiring, leadership, co-founder dynamics, energy management, and the human side of building.
+5. **Ecosystem and policy (15%)** — Regulation, DPDP, ONDC, India Stack, capital flows, state-level startup policy.
+
+The mix is editorial — not pinned to a launch calendar — so each week the rhythm reflects what's interesting in the ecosystem.
 
 ## Key links
 
-- Site: https://thedebateclub.info
-- WhatsApp Community (primary entry point): https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M
-- Meetup (schedule + RSVP): https://www.meetup.com/the-debate-club/
-- Email: thedebateclub.info@gmail.com
-- Topic suggestion form: https://forms.gle/xggwN2CQ7VmA6dkr8
-- Volunteer form: https://forms.gle/h9XLrPpHwhzxjAtL6
-- Reddit: https://www.reddit.com/r/TheDebateClubIndia/
-- Discord: https://discord.gg/vRbkcmuAys
-- YouTube: https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw
-- Past debate recordings (Drive): https://drive.google.com/drive/folders/11NuVE_N_gmAKYyVbOaN9F9LW017ip4oX?usp=sharing
+- Site: https://startupclub.live
+- LinkedIn (primary channel): https://www.linkedin.com/company/the-startup-club-india
+- X: https://x.com/startupclublive
+- Instagram: https://www.instagram.com/startupclub.live/
+- Community space on Clikkin (QR on the home page): https://clikkin.com
 
 ## Site sections
 
-- /#home — overview, schedule, primary CTAs.
-- /#about — mission, what we do, how topic selection works, code of conduct, disclaimer.
-- /#blog — community announcements and updates. Individual posts at /blog/<slug>/.
-- /#contact — WhatsApp / email / Meetup, plus topic and volunteer forms.
+- /#home — overview, who it's for, what we publish, social CTAs.
+- /#about — audiences and content pillars in detail.
+- /#clikkin — community space on Clikkin (QR to join).
+- /#blog — longer reads from the ecosystem. Individual posts at /blog/<slug>/.
+- /#contact — LinkedIn / X / Instagram cards.
 
 ## FAQ (canonical answers)
 
-**What is The Debate Club?**
-A community for civil public discourse. We hold a live voice debate on Zoom every Saturday at 11am IST on community-chosen topics.
+**What is The Startup Club?**
+A community for India's innovation ecosystem — founders, aspiring entrepreneurs, investors, mentors, and ecosystem enablers. We publish daily content across five pillars.
 
-**When and where?**
-Saturdays, 11am Indian Standard Time, on Zoom. The Zoom link is posted on each event on our Meetup page (https://www.meetup.com/the-debate-club/).
+**Who is The Startup Club for?**
+Early-stage founders, aspiring entrepreneurs, angel and institutional investors, mentors and operators, and ecosystem enablers — incubators, accelerators, policy folks, and community builders.
 
-**How are topics chosen?**
-Anyone suggests topics via our form; the community votes in WhatsApp polls; winners are scheduled on Meetup with the Zoom link attached.
+**What does The Startup Club publish?**
+Five content pillars: Innovation (25%), Fundraising (20%), Product and GTM (20%), Founder and team craft (20%), Ecosystem and policy (15%). Content goes out on LinkedIn, X, and Instagram.
 
-**How do I join?**
-Join the WhatsApp Community for chat, polls, and announcements; RSVP to the next Meetup event for the Zoom link to the actual debate.
+**How do I join or follow?**
+Follow @the-startup-club-india on LinkedIn, @startupclublive on X, and @startupclub.live on Instagram. Or scan the Clikkin QR on the home page to join the Startup Club space on Clikkin.
 
-**Do I need debate experience?**
-No. All experience levels are welcome.
-
-**Is it free?**
-Yes. The Debate Club is free and open to all.
+**Is The Startup Club free?**
+Yes. Following The Startup Club and engaging with our content is free.

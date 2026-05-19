@@ -1,0 +1,42 @@
+---
+import Section from "../components/Section.astro";
+
+const clikkinUrl = "https://clikkin.com";
+---
+
+<Section
+  id="clikkin"
+  eyebrow="Powered by"
+  title="The Startup Club lives on Clikkin."
+  intro="Clikkin is a privacy-first platform for distributed communities. The Startup Club's space — where founders, investors, and operators actually talk to each other — runs there. Scan the QR to join the space."
+>
+  <div class="grid lg:grid-cols-[1fr_1.05fr] gap-10 lg:gap-12 items-center">
+    <div class="rounded-2xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-6 sm:p-8 flex flex-col items-center text-center">
+      <img
+        src="/images/clikkin-qr.svg"
+        alt="QR code to join The Startup Club space on Clikkin"
+        width="280"
+        height="280"
+        class="w-full max-w-[280px] h-auto"
+        loading="lazy"
+      />
+      <p class="mt-5 text-[14px] text-[color:var(--color-ink-soft)]">
+        Open your camera. Point. Tap the link.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold tracking-tight">Why Clikkin</h3>
+      <p class="mt-3 text-[15.5px] text-[color:var(--color-ink-muted)] leading-relaxed">
+        We wanted a home for the community that wasn't a Slack workspace fighting for attention with everyone else's, wasn't a Telegram group lost to noise, and wasn't a feed someone else owns. Clikkin lets us run a dedicated space with the operating model we want — clear roles, real privacy, posts that surface by quality not by algorithm.
+      </p>
+      <p class="mt-3 text-[15.5px] text-[color:var(--color-ink-muted)] leading-relaxed">
+        Scanning the QR drops you into The Startup Club space on Clikkin. You'll see the active threads, the people in the room, and the way the conversation is organised.
+      </p>
+      <p class="mt-5 text-[14px] text-[color:var(--color-ink-soft)]">
+        Curious how Clikkin works?
+        <a href={clikkinUrl} target="_blank" rel="noopener noreferrer" class="font-semibold">Learn more at clikkin.com →</a>
+      </p>
+    </div>
+  </div>
+</Section>

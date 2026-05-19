@@ -2,66 +2,56 @@
 import Button from "../components/Button.astro";
 import BrandIcon from "../components/BrandIcon.astro";
 
-const whatsappUrl = "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M";
-const meetupUrl = "https://www.meetup.com/the-debate-club/";
-const youtubeUrl = "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw";
-const topicForm = "https://forms.gle/xggwN2CQ7VmA6dkr8";
+const linkedinUrl = "https://www.linkedin.com/company/the-startup-club-india";
+const xUrl = "https://x.com/startupclublive";
+const instagramUrl = "https://www.instagram.com/startupclub.live/";
 ---
 
 <section id="home" class="scroll-mt-20">
   <div class="mx-auto max-w-[1120px] px-5 sm:px-8 pt-16 sm:pt-24 pb-14 sm:pb-20">
     <div class="max-w-[44rem]">
-      <div class="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3 py-1 text-[12px] font-semibold tracking-wide uppercase text-[color:var(--color-accent)] mb-7">
-        <span class="relative flex h-2 w-2">
-          <span class="absolute inline-flex h-full w-full rounded-full bg-[color:var(--color-accent)] opacity-50 animate-ping"></span>
-          <span class="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--color-accent)]"></span>
-        </span>
-        Live again, every Saturday at 11am IST
+      <div class="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3 py-1 text-[12px] font-semibold tracking-wide uppercase text-[color:var(--color-ink)] mb-7">
+        <span class="h-2 w-2 rounded-full bg-[color:var(--color-ink)]"></span>
+        For India's innovation ecosystem
       </div>
 
       <h1 class="text-[2.25rem] sm:text-[3.25rem] leading-[1.05] font-bold tracking-tight">
-        A neutral platform for
-        <span class="text-[color:var(--color-accent)]">civil public discourse.</span>
+        Where India's innovation
+        <span class="text-[color:var(--color-accent)]">ecosystem connects.</span>
       </h1>
 
       <p class="mt-6 text-[18px] sm:text-[19px] text-[color:var(--color-ink-muted)] leading-relaxed">
-        The Debate Club is a community for anyone who wants to participate in open, civil debate, not just consume it. We meet on Zoom every Saturday at 11am IST for a live voice debate on community-suggested, member-voted topics. Every session is recorded and posted to our YouTube channel.
+        The Startup Club is a community for founders, aspiring entrepreneurs, investors, mentors, and the people building India's startup ecosystem. We publish across five pillars — innovation, fundraising, product and go-to-market, founder craft, and ecosystem and policy — so the conversation that moves Indian startups forward has a home.
       </p>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        <Button href={whatsappUrl} variant="primary" ariaLabel="Join our community on WhatsApp">
-          <BrandIcon brand="whatsapp" size={16} />
-          Join Community
+        <Button href={linkedinUrl} variant="primary" ariaLabel="Follow The Startup Club on LinkedIn">
+          <BrandIcon brand="linkedin" size={16} />
+          Follow on LinkedIn
         </Button>
-        <Button href={topicForm} variant="tinted" ariaLabel="Suggest a debate topic">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.7.5 1 1.3 1 2.1V18h6v-1.2c0-.8.3-1.6 1-2.1A7 7 0 0 0 12 2Z" />
-          </svg>
-          Suggest a topic
+        <Button href={xUrl} variant="tinted" ariaLabel="Follow The Startup Club on X">
+          <BrandIcon brand="x" size={16} />
+          Follow on X
         </Button>
-        <Button href={meetupUrl} variant="ghost">
-          <BrandIcon brand="meetup" size={16} class="text-[#ED1C40]" />
-          See upcoming debates
-        </Button>
-        <Button href={youtubeUrl} variant="ghost" ariaLabel="Watch past debates on YouTube">
-          <BrandIcon brand="youtube" size={16} class="text-[#FF0033]" />
-          Watch recordings
+        <Button href={instagramUrl} variant="ghost" ariaLabel="Follow The Startup Club on Instagram">
+          <BrandIcon brand="instagram" size={16} />
+          Instagram
         </Button>
       </div>
 
       <p class="mt-4 text-[14px] text-[color:var(--color-ink-soft)] max-w-[44rem]">
-        <span class="font-semibold text-[color:var(--color-ink-muted)]">The community picks the topics.</span>
-        Anyone can <a href={topicForm} target="_blank" rel="noopener noreferrer" class="font-semibold">submit one</a>. We run polls in WhatsApp, and the winners get scheduled.
+        <span class="font-semibold text-[color:var(--color-ink-muted)]">New content daily.</span>
+        Posts go out across LinkedIn, X, and Instagram — pick whichever channel you live on and we'll meet you there.
       </p>
 
       <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-[44rem]">
         <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
-          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">When</div>
-          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">Saturdays · 11am IST</div>
+          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Who it's for</div>
+          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">Founders, investors, mentors</div>
         </div>
         <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
           <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Where</div>
-          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">Zoom · link via Meetup</div>
+          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">LinkedIn · X · Instagram</div>
         </div>
         <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
           <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Cost</div>

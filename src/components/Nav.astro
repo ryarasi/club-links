@@ -4,11 +4,11 @@ import BrandIcon from "./BrandIcon.astro";
 const links = [
   { href: "/#home", label: "Home" },
   { href: "/#about", label: "About" },
+  { href: "/#clikkin", label: "Join" },
   { href: "/#blog", label: "Blog" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/#contact", label: "Follow" },
 ];
-const whatsappUrl = "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M";
-const youtubeUrl = "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw";
+const linkedinUrl = "https://www.linkedin.com/company/the-startup-club-india";
 ---
 
 <header class="sticky top-0 z-50 backdrop-blur bg-[color:var(--color-bg)]/85 border-b border-[color:var(--color-line)]">
@@ -18,13 +18,13 @@ const youtubeUrl = "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw";
   >
     <a href="/#home" class="flex items-center gap-3 text-[color:var(--color-ink)] no-underline font-semibold tracking-tight">
       <img
-        src="/images/logo.png"
+        src="/images/tsc-logo.png"
         alt=""
         width="44"
         height="44"
-        class="rounded-[10px] ring-1 ring-[color:var(--color-line)]"
+        class="rounded-full ring-1 ring-[color:var(--color-line)] bg-[color:var(--color-ink)]"
       />
-      <span class="text-base sm:text-[17px]">The Debate Club</span>
+      <span class="text-base sm:text-[17px]">The Startup Club</span>
     </a>
 
     <ul class="hidden md:flex items-center gap-7 m-0 p-0 list-none">
@@ -42,23 +42,13 @@ const youtubeUrl = "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw";
 
     <div class="flex items-center gap-2">
       <a
-        href={youtubeUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Watch our debates on YouTube"
-        title="Watch on YouTube"
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#FF0033] hover:bg-[#cc0029] text-white no-underline transition-colors"
-      >
-        <BrandIcon brand="youtube" size={18} />
-      </a>
-      <a
-        href={whatsappUrl}
+        href={linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-accent)] hover:bg-[color:var(--color-accent-hover)] text-white no-underline px-3.5 sm:px-4 h-10 text-[13.5px] sm:text-sm font-semibold transition-colors"
       >
-        <BrandIcon brand="whatsapp" size={16} />
-        <span>Join Community</span>
+        <BrandIcon brand="linkedin" size={16} />
+        <span>Follow on LinkedIn</span>
       </a>
     </div>
   </nav>

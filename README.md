@@ -1,48 +1,40 @@
-# The Debate Club — thedebateclub.info
+# The Startup Club — startupclub.live
 
-Source for [thedebateclub.info](https://thedebateclub.info), the home of The Debate Club community.
+Source for [startupclub.live](https://startupclub.live), the home of The Startup Club — a community for India's founders, investors, mentors, and ecosystem enablers.
 
-A community for civil public discourse. Live online voice debates every Saturday at 11am IST.
+Daily content across innovation, fundraising, product/GTM, founder craft, and ecosystem and policy. Follow on [LinkedIn](https://www.linkedin.com/company/the-startup-club-india), [X](https://x.com/startupclublive), and [Instagram](https://www.instagram.com/startupclub.live/).
 
 ## Stack
 
-- **[Astro 5](https://astro.build)** — static site generator, single-page anchored layout (Home / About / Blog / Contact) plus a per-post blog route at `/blog/<slug>/`.
+- **[Astro 5](https://astro.build)** — static site generator, single-page anchored layout (Home / About / Join / Blog / Follow) plus a per-post blog route at `/blog/<slug>/`.
 - **[Tailwind CSS 4](https://tailwindcss.com)** — utility styling, design tokens in `src/styles/global.css`.
 - **[@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)** — auto-generated `sitemap-index.xml`.
 - Content collection (`src/content/blog/*.md`) for blog posts.
-- Deployed on **Cloudflare Pages** via GitHub Actions (`.github/workflows/deploy.yml`).
+- Deployed on **Cloudflare Pages** from the `TheStartupClub` branch of this repo.
 
 ## Develop
 
 ```bash
-pnpm install
-pnpm dev          # http://localhost:4321
-pnpm build        # outputs ./dist
+pnpm install   # or: npm install
+pnpm dev       # http://localhost:4321
+pnpm build     # outputs ./dist
 pnpm preview
 ```
 
 ## Deploy
 
-Pushes to the `TheDebateClub` branch trigger a Cloudflare Pages build via the workflow. Project name on Cloudflare: `thedebateclub`.
-
-Required GitHub repo secrets:
-
-- `CLOUDFLARE_API_TOKEN` — token with Pages:Edit permission
-- `CLOUDFLARE_ACCOUNT_ID`
+Pushes to the `TheStartupClub` branch trigger the Cloudflare Pages build for the TSC project. Pages project name: `the-startup-club` (to be created on first deploy).
 
 ## Branches
 
-This repo (a multi-club collection) hosts several sibling sites on separate branches:
+This repo hosts sibling sites on separate branches:
 
-- `main` — base/landing
-- `TheDebateClub` — this site
-- `TheStartupClub`, `TheInfluencersClub` — other clubs
-
-Each branch is its own Pages project; only `TheDebateClub` is wired through this workflow.
+- `TheDebateClub` — The Debate Club at thedebateclub.info
+- `TheStartupClub` — this site at startupclub.live
 
 ## Editing content
 
-- Hero / About / Contact copy lives directly in `src/sections/*.astro`.
+- Hero / About / Powered-by-Clikkin / Follow copy lives directly in `src/sections/*.astro`.
 - New blog posts: drop a Markdown file into `src/content/blog/`, frontmatter `title`, `date`, `excerpt`, `tags`, optional `draft: true`.
-- SEO + structured data (Organization + Event + FAQPage + BlogPosting JSON-LD): `src/components/StructuredData.astro` and `src/layouts/BaseLayout.astro`.
+- SEO + structured data (Organization + WebSite + FAQPage + BlogPosting JSON-LD): `src/components/StructuredData.astro` and `src/layouts/BaseLayout.astro`.
 - LLM-friendly summary: `public/llms.txt`.

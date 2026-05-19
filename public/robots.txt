@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thedebateclub.info/sitemap-index.xml
+Sitemap: https://startupclub.live/sitemap-index.xml

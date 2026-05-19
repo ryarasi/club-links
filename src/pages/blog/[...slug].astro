@@ -22,7 +22,7 @@ const formattedDate = new Date(post.data.date).toLocaleDateString("en-US", {
 ---
 
 <BaseLayout
-  title={`${post.data.title} · The Debate Club`}
+  title={`${post.data.title} · The Startup Club`}
   description={post.data.excerpt}
   pageType="article"
   article={{
@@ -50,7 +50,7 @@ const formattedDate = new Date(post.data.date).toLocaleDateString("en-US", {
       <div class="mt-4 text-[14px] text-[color:var(--color-ink-soft)] font-medium">
         <time datetime={post.data.date.toISOString()}>{formattedDate}</time>
         <span aria-hidden="true"> · </span>
-        The Debate Club
+        The Startup Club
       </div>
     </header>
 

@@ -1,9 +1,9 @@
 {
-  "name": "the-debate-club",
+  "name": "the-startup-club",
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "description": "The Debate Club — a community for civil public discourse. Weekly online voice debates every Saturday 11am IST.",
+  "description": "The Startup Club — a community for India's founders, investors, mentors, and ecosystem enablers. Daily content across innovation, fundraising, product/GTM, founder craft, and policy.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

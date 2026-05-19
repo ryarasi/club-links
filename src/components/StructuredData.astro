@@ -17,47 +17,27 @@ const { home = false, article, siteUrl } = Astro.props;
 const organization = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "The Debate Club",
-  alternateName: "TheDebateClub",
+  name: "The Startup Club",
+  alternateName: "Startup Club India",
   url: siteUrl,
-  logo: `${siteUrl}/images/logo.png`,
-  email: "thedebateclub.info@gmail.com",
+  logo: `${siteUrl}/images/tsc-logo.png`,
   description:
-    "A neutral community platform for civil public discourse. Live voice debates on Zoom every Saturday at 11am IST; community chat on WhatsApp; schedule on Meetup.",
+    "The Startup Club is a community for India's founders, investors, mentors, and ecosystem enablers. We publish across innovation, fundraising, product/GTM, founder craft, and policy.",
+  areaServed: { "@type": "Country", name: "India" },
   sameAs: [
-    "https://www.meetup.com/the-debate-club/",
-    "https://www.reddit.com/r/TheDebateClubIndia/",
-    "https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M",
-    "https://discord.gg/vRbkcmuAys",
-    "https://www.youtube.com/channel/UCdzpn4pK63658vlhRQexJVw",
+    "https://www.linkedin.com/company/the-startup-club-india",
+    "https://x.com/startupclublive",
+    "https://www.instagram.com/startupclub.live/",
   ],
 };
 
-const event = {
+const website = {
   "@context": "https://schema.org",
-  "@type": "Event",
-  name: "The Debate Club: Weekly Live Debate",
-  description:
-    "An open, voice-based debate on a community-selected topic, held live on Zoom. Anyone can join, listen, or speak. The Zoom link for each session is posted on the corresponding Meetup event.",
-  eventSchedule: {
-    "@type": "Schedule",
-    repeatFrequency: "P1W",
-    byDay: "https://schema.org/Saturday",
-    startTime: "11:00",
-    endTime: "12:30",
-    scheduleTimezone: "Asia/Kolkata",
-  },
-  eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
-  eventStatus: "https://schema.org/EventScheduled",
-  location: {
-    "@type": "VirtualLocation",
-    name: "Zoom (link posted on Meetup event)",
-    url: "https://www.meetup.com/the-debate-club/",
-  },
-  organizer: { "@type": "Organization", name: "The Debate Club", url: siteUrl },
-  isAccessibleForFree: true,
-  inLanguage: "en",
-  audience: { "@type": "Audience", audienceType: "General public" },
+  "@type": "WebSite",
+  name: "The Startup Club",
+  url: siteUrl,
+  inLanguage: "en-IN",
+  publisher: { "@type": "Organization", name: "The Startup Club", url: siteUrl },
 };
 
 const faq = {
@@ -66,50 +46,42 @@ const faq = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is The Debate Club?",
+      name: "What is The Startup Club?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Debate Club is a community for anyone interested in participating in civil discourse through open debates. Our community lives on WhatsApp, and we run a live voice debate on Zoom every Saturday at 11am IST.",
+        text: "The Startup Club is a community for India's innovation ecosystem — founders, aspiring entrepreneurs, investors, mentors, and ecosystem enablers. We publish daily content across innovation, fundraising, product and go-to-market, founder craft, and policy.",
       },
     },
     {
       "@type": "Question",
-      name: "When and where do you meet?",
+      name: "Who is The Startup Club for?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We meet every Saturday at 11am Indian Standard Time (IST) on Zoom. The Zoom link for each session is posted on the corresponding event on our Meetup page (https://www.meetup.com/the-debate-club/), where you can also see the upcoming schedule and RSVP.",
+        text: "Early-stage founders, aspiring entrepreneurs, angel and institutional investors, mentors and operators, and anyone enabling India's startup ecosystem — incubators, accelerators, policy folks, and community builders.",
       },
     },
     {
       "@type": "Question",
-      name: "How are debate topics chosen?",
+      name: "What does The Startup Club publish?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Anyone can suggest a topic via our topic-suggestion form. We periodically post polls in our WhatsApp group, members vote, and we schedule the upcoming Saturday sessions on Meetup based on the winning topics.",
+        text: "Five content pillars: Innovation (25%), Fundraising (20%), Product and GTM (20%), Founder and team craft (20%), and Ecosystem and policy (15%). Content goes out on LinkedIn, X, and Instagram.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I join?",
+      name: "How do I join or follow?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Start by joining our WhatsApp Community at https://chat.whatsapp.com/J7HajIvMSUfLnS0W47Un7M. That's where polls, topic discussions, and announcements happen. To attend a live debate, RSVP to the upcoming session on our Meetup page; the Zoom link is posted there.",
+        text: "Follow @the-startup-club-india on LinkedIn, @startupclublive on X, and @startupclub.live on Instagram. Or scan the Clikkin QR on our home page to join the Startup Club space on Clikkin.",
       },
     },
     {
       "@type": "Question",
-      name: "Do I need debate experience?",
+      name: "Is The Startup Club free?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. The Debate Club is open to anyone interested in civil public discourse, regardless of prior debate experience. You're welcome to join, listen, and speak whenever you're comfortable.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is The Debate Club free?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. The Debate Club is free to join and participate in. We are a neutral community platform, not a commercial product.",
+        text: "Yes. Following The Startup Club and engaging with our content is free.",
       },
     },
   ],
@@ -122,13 +94,13 @@ const articleLd = article
       headline: article.title,
       description: article.description,
       datePublished: article.datePublished,
-      author: { "@type": "Organization", name: "The Debate Club", url: siteUrl },
+      author: { "@type": "Organization", name: "The Startup Club", url: siteUrl },
       publisher: {
         "@type": "Organization",
-        name: "The Debate Club",
+        name: "The Startup Club",
         logo: {
           "@type": "ImageObject",
-          url: `${siteUrl}/images/logo.png`,
+          url: `${siteUrl}/images/tsc-logo.png`,
         },
       },
       mainEntityOfPage: {
@@ -142,7 +114,7 @@ const articleLd = article
 {home && (
   <>
     <script type="application/ld+json" set:html={JSON.stringify(organization)} />
-    <script type="application/ld+json" set:html={JSON.stringify(event)} />
+    <script type="application/ld+json" set:html={JSON.stringify(website)} />
     <script type="application/ld+json" set:html={JSON.stringify(faq)} />
   </>
 )}

@@ -22,8 +22,8 @@ interface Props {
 }
 
 const {
-  title = "The Debate Club: Civil Public Discourse, Every Saturday",
-  description = "A neutral community for civil public discourse. Live voice debates on Zoom every Saturday at 11am IST. Topics are community-suggested and member-voted. Join the WhatsApp community to participate.",
+  title = "The Startup Club — Where India's Innovation Ecosystem Connects",
+  description = "The Startup Club is a community for India's founders, investors, mentors, and ecosystem enablers. We publish across innovation, fundraising, product/GTM, founder craft, and policy. Follow us on LinkedIn, X, and Instagram.",
   ogImage = "/og-image.png",
   pageType = "website",
   homeStructuredData = false,
@@ -31,10 +31,10 @@ const {
   canonical,
 } = Astro.props;
 
-const siteUrl = "https://thedebateclub.info";
+const siteUrl = "https://startupclub.live";
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).toString();
 const ogImageUrl = new URL(ogImage, siteUrl).toString();
-const ogImageAlt = "The Debate Club: civil public discourse, every Saturday";
+const ogImageAlt = "The Startup Club — where India's innovation ecosystem connects";
 ---
 
 <!doctype html>
@@ -48,7 +48,7 @@ const ogImageAlt = "The Debate Club: civil public discourse, every Saturday";
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#6768fd" />
+    <meta name="theme-color" content="#000000" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
@@ -60,7 +60,7 @@ const ogImageAlt = "The Debate Club: civil public discourse, every Saturday";
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:site_name" content="The Debate Club" />
+    <meta property="og:site_name" content="The Startup Club" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
