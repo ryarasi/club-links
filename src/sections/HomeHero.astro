@@ -19,16 +19,16 @@ const featured = [
   },
   {
     brand: "meetup" as const,
-    eyebrow: "Attend",
+    eyebrow: "Join virtually",
     label: "Meetup",
-    sub: "Live in-person events across India. RSVP to the next one.",
+    sub: "Live virtual events — talks, panels, and AMAs you can join from anywhere. RSVP for the next session.",
     href: meetupUrl,
   },
   {
     brand: "allevents" as const,
-    eyebrow: "Discover",
+    eyebrow: "Attend in person",
     label: "AllEvents",
-    sub: "Full schedule of upcoming TSC meetups and ecosystem gatherings.",
+    sub: "Live in-person events across India — meetups and ecosystem gatherings. Find the next one near you.",
     href: alleventsUrl,
   },
 ];
@@ -54,7 +54,7 @@ const featured = [
 
     <div class="mt-10 sm:mt-12">
       <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-4">
-        Watch · Attend · Discover
+        Watch · Join virtually · Attend in person
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {featured.map((c, i) => (
