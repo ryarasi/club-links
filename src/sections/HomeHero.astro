@@ -1,10 +1,37 @@
 ---
-import Button from "../components/Button.astro";
 import BrandIcon from "../components/BrandIcon.astro";
+
+const youtubeUrl = "https://www.youtube.com/@startupclublive";
+const meetupUrl = "https://www.meetup.com/the-startup-club/";
+const alleventsUrl = "https://allevents.by/25026079";
 
 const linkedinUrl = "https://www.linkedin.com/company/the-startup-club-india";
 const xUrl = "https://x.com/startupclublive";
 const instagramUrl = "https://www.instagram.com/startupclub.live/";
+
+const featured = [
+  {
+    brand: "youtube" as const,
+    eyebrow: "Watch",
+    label: "YouTube",
+    sub: "Founder conversations, breakdowns, and event recordings — long-form video on @startupclublive.",
+    href: youtubeUrl,
+  },
+  {
+    brand: "meetup" as const,
+    eyebrow: "Attend",
+    label: "Meetup",
+    sub: "Live in-person events across India. RSVP to the next one.",
+    href: meetupUrl,
+  },
+  {
+    brand: "allevents" as const,
+    eyebrow: "Discover",
+    label: "AllEvents",
+    sub: "Full schedule of upcoming TSC meetups and ecosystem gatherings.",
+    href: alleventsUrl,
+  },
+];
 ---
 
 <section id="home" class="scroll-mt-20">
@@ -23,40 +50,62 @@ const instagramUrl = "https://www.instagram.com/startupclub.live/";
       <p class="mt-6 text-[18px] sm:text-[19px] text-[color:var(--color-ink-muted)] leading-relaxed">
         The Startup Club is a community for founders, aspiring entrepreneurs, investors, mentors, and the people building India's startup ecosystem. We publish across five pillars — innovation, fundraising, product and go-to-market, founder craft, and ecosystem and policy — so the conversation that moves Indian startups forward has a home.
       </p>
+    </div>
 
-      <div class="mt-8 flex flex-wrap gap-3">
-        <Button href={linkedinUrl} variant="primary" ariaLabel="Follow The Startup Club on LinkedIn">
-          <BrandIcon brand="linkedin" size={16} />
-          Follow on LinkedIn
-        </Button>
-        <Button href={xUrl} variant="tinted" ariaLabel="Follow The Startup Club on X">
-          <BrandIcon brand="x" size={16} />
-          Follow on X
-        </Button>
-        <Button href={instagramUrl} variant="ghost" ariaLabel="Follow The Startup Club on Instagram">
-          <BrandIcon brand="instagram" size={16} />
-          Instagram
-        </Button>
+    <div class="mt-10 sm:mt-12">
+      <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-4">
+        Watch · Attend · Discover
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        {featured.map((c, i) => (
+          <a
+            href={c.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={`group block rounded-2xl border p-6 sm:p-7 no-underline transition-all hover:-translate-y-0.5 ${
+              i === 0
+                ? "bg-[color:var(--color-accent)] border-[color:var(--color-accent)] text-white hover:bg-[color:var(--color-accent-hover)]"
+                : "bg-[color:var(--color-bg-elev)] border-[color:var(--color-line)] hover:border-[color:var(--color-ink)]"
+            }`}
+          >
+            <div class={`flex items-center justify-between mb-4 ${i === 0 ? "text-white/85" : "text-[color:var(--color-ink-soft)]"}`}>
+              <div class="text-[11px] tracking-[0.16em] uppercase font-semibold">{c.eyebrow}</div>
+              <BrandIcon
+                brand={c.brand}
+                size={22}
+                class={i === 0 ? "text-white" : "text-[color:var(--color-ink)]"}
+              />
+            </div>
+            <div class={`text-[20px] sm:text-[22px] font-bold tracking-tight ${i === 0 ? "text-white" : "text-[color:var(--color-ink)]"}`}>
+              {c.label}
+            </div>
+            <div class={`mt-2 text-[14.5px] leading-relaxed ${i === 0 ? "text-white/90" : "text-[color:var(--color-ink-muted)]"}`}>
+              {c.sub}
+            </div>
+            <div class={`mt-5 inline-flex items-center gap-1 text-[14px] font-semibold ${i === 0 ? "text-white" : "text-[color:var(--color-ink)]"}`}>
+              Open
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        ))}
       </div>
 
-      <p class="mt-4 text-[14px] text-[color:var(--color-ink-soft)] max-w-[44rem]">
-        <span class="font-semibold text-[color:var(--color-ink-muted)]">New content daily.</span>
-        Posts go out across LinkedIn, X, and Instagram — pick whichever channel you live on and we'll meet you there.
-      </p>
-
-      <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-[44rem]">
-        <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
-          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Who it's for</div>
-          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">Founders, investors, mentors</div>
-        </div>
-        <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
-          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Where</div>
-          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">LinkedIn · X · Instagram</div>
-        </div>
-        <div class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4">
-          <div class="text-[12px] uppercase tracking-wide text-[color:var(--color-ink-soft)] font-semibold">Cost</div>
-          <div class="mt-1 text-[15px] font-semibold text-[color:var(--color-ink)]">Free · open to all</div>
-        </div>
+      <div class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+        <span class="text-[13px] text-[color:var(--color-ink-soft)] font-semibold tracking-wide uppercase">Or follow on</span>
+        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14.5px] font-semibold text-[color:var(--color-ink)] hover:opacity-70 no-underline transition-opacity">
+          <BrandIcon brand="linkedin" size={16} />
+          LinkedIn
+        </a>
+        <a href={xUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14.5px] font-semibold text-[color:var(--color-ink)] hover:opacity-70 no-underline transition-opacity">
+          <BrandIcon brand="x" size={16} />
+          X
+        </a>
+        <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14.5px] font-semibold text-[color:var(--color-ink)] hover:opacity-70 no-underline transition-opacity">
+          <BrandIcon brand="instagram" size={16} />
+          Instagram
+        </a>
       </div>
     </div>
   </div>

@@ -6,25 +6,17 @@ const primary = [
   {
     brand: "linkedin" as const,
     label: "LinkedIn",
-    sub: "Our main channel. Daily posts across innovation, fundraising, product, founder craft, and policy.",
+    sub: "Our main feed. Daily posts across innovation, fundraising, product, founder craft, and policy.",
     href: "https://www.linkedin.com/company/the-startup-club-india",
-    cta: "Follow",
+    cta: "Follow on LinkedIn",
     accent: true,
-  },
-  {
-    brand: "youtube" as const,
-    label: "YouTube",
-    sub: "Long-form video — founder conversations, breakdowns, and event recordings.",
-    href: "https://www.youtube.com/@startupclublive",
-    cta: "Subscribe",
-    accent: false,
   },
   {
     brand: "x" as const,
     label: "X",
     sub: "Sharp, real-time signal — what's breaking in Indian startups and who's funding what.",
     href: "https://x.com/startupclublive",
-    cta: "Follow",
+    cta: "Follow on X",
     accent: false,
   },
   {
@@ -32,7 +24,7 @@ const primary = [
     label: "Instagram",
     sub: "Visual takes on founder craft and ecosystem moments. Easier to share, easier to skim.",
     href: "https://www.instagram.com/startupclub.live/",
-    cta: "Follow",
+    cta: "Follow on Instagram",
     accent: false,
   },
 ];
@@ -55,15 +47,10 @@ const forms = [
 ];
 
 type ChannelChip = {
-  brand: "meetup" | "whatsapp" | "telegram" | "allevents";
+  brand: "whatsapp" | "telegram";
   label: string;
   href: string;
 };
-
-const eventChannels: ChannelChip[] = [
-  { brand: "meetup", label: "Meetup", href: "https://www.meetup.com/the-startup-club/" },
-  { brand: "allevents", label: "AllEvents", href: "https://allevents.by/25026079" },
-];
 
 const communityChannels: ChannelChip[] = [
   { brand: "whatsapp", label: "WhatsApp", href: "https://chat.whatsapp.com/Keb65USjRvaAbPQby6dwt1" },
@@ -74,10 +61,10 @@ const communityChannels: ChannelChip[] = [
 <Section
   id="contact"
   eyebrow="Follow"
-  title="Follow the conversation."
-  intro="Pick whichever channel you already live on — LinkedIn for the long form, YouTube for the conversations, X for the signal, Instagram for the visuals. We publish on all of them."
+  title="Follow the daily feed."
+  intro="LinkedIn for the long form, X for the signal, Instagram for the visuals. We publish on all three."
 >
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  <div class="grid sm:grid-cols-3 gap-5">
     {primary.map((c) => (
       <a
         href={c.href}
@@ -126,44 +113,23 @@ const communityChannels: ChannelChip[] = [
     ))}
   </div>
 
-  <div class="mt-12 grid sm:grid-cols-2 gap-x-10 gap-y-6">
-    <div>
-      <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-3">In-person events</div>
-      <p class="text-[14px] text-[color:var(--color-ink-muted)] mb-3 leading-relaxed">
-        Live schedule of TSC meetups and ecosystem gatherings. Same dates on both — RSVP wherever you already have an account.
-      </p>
-      <div class="flex flex-wrap gap-2.5">
-        {eventChannels.map((c) => (
-          <a
-            href={c.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3.5 py-1.5 text-[13.5px] font-medium text-[color:var(--color-ink-muted)] hover:text-[color:var(--color-ink)] hover:border-[color:var(--color-ink)] no-underline transition-colors"
-          >
-            <BrandIcon brand={c.brand} size={14} />
-            {c.label}
-          </a>
-        ))}
-      </div>
-    </div>
-    <div>
-      <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-3">Community channels</div>
-      <p class="text-[14px] text-[color:var(--color-ink-muted)] mb-3 leading-relaxed">
-        Day-to-day chat with founders, mentors, and operators in the community.
-      </p>
-      <div class="flex flex-wrap gap-2.5">
-        {communityChannels.map((c) => (
-          <a
-            href={c.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3.5 py-1.5 text-[13.5px] font-medium text-[color:var(--color-ink-muted)] hover:text-[color:var(--color-ink)] hover:border-[color:var(--color-ink)] no-underline transition-colors"
-          >
-            <BrandIcon brand={c.brand} size={14} />
-            {c.label}
-          </a>
-        ))}
-      </div>
+  <div class="mt-12">
+    <div class="text-[12px] tracking-[0.14em] uppercase text-[color:var(--color-ink-soft)] font-semibold mb-3">Community channels</div>
+    <p class="text-[14px] text-[color:var(--color-ink-muted)] mb-3 leading-relaxed max-w-2xl">
+      Day-to-day chat with founders, mentors, and operators in the community.
+    </p>
+    <div class="flex flex-wrap gap-2.5">
+      {communityChannels.map((c) => (
+        <a
+          href={c.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] px-3.5 py-1.5 text-[13.5px] font-medium text-[color:var(--color-ink-muted)] hover:text-[color:var(--color-ink)] hover:border-[color:var(--color-ink)] no-underline transition-colors"
+        >
+          <BrandIcon brand={c.brand} size={14} />
+          {c.label}
+        </a>
+      ))}
     </div>
   </div>
 </Section>
