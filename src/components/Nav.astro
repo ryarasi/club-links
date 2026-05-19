@@ -11,18 +11,22 @@ const links = [
 const linkedinUrl = "https://www.linkedin.com/company/the-startup-club-india";
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur bg-[color:var(--color-bg)]/85 border-b border-[color:var(--color-line)]">
+<header id="site-nav" class="sticky top-0 z-50 backdrop-blur bg-[color:var(--color-bg)]/85 border-b border-[color:var(--color-line)]">
   <nav
-    class="mx-auto max-w-[1120px] px-5 sm:px-8 h-[80px] sm:h-[88px] flex items-center justify-between gap-4"
+    class="mx-auto max-w-[1120px] px-5 sm:px-8 h-[72px] sm:h-[80px] flex items-center justify-between gap-4"
     aria-label="Primary"
   >
-    <a href="/#home" class="flex items-center no-underline" aria-label="The Startup Club — home">
+    <a
+      href="/#home"
+      class="nav-logo flex items-center no-underline opacity-0 -translate-y-1 scale-95 pointer-events-none transition-all duration-300"
+      aria-label="The Startup Club — home"
+    >
       <img
         src="/images/tsc-logo.png"
         alt="The Startup Club"
         width="112"
         height="112"
-        class="block h-14 sm:h-16 w-auto rounded-full bg-[color:var(--color-ink)] ring-1 ring-[color:var(--color-line)]"
+        class="block h-12 sm:h-14 w-auto rounded-full bg-[color:var(--color-ink)] ring-1 ring-[color:var(--color-line)]"
       />
     </a>
 
@@ -52,3 +56,37 @@ const linkedinUrl = "https://www.linkedin.com/company/the-startup-club-india";
     </div>
   </nav>
 </header>
+
+<style>
+  /* When the hero logo is offscreen, reveal the nav logo. */
+  #site-nav[data-hero-out="true"] .nav-logo {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    const nav = document.getElementById("site-nav");
+    const heroLogo = document.getElementById("hero-logo");
+
+    // If there is no hero logo on this page (e.g. blog posts), show the nav logo always.
+    if (!nav) return;
+    if (!heroLogo) {
+      nav.dataset.heroOut = "true";
+      return;
+    }
+
+    // Observe the hero logo. When it leaves the viewport, show the nav logo.
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        nav.dataset.heroOut = entry.isIntersecting ? "false" : "true";
+      },
+      // A small negative top margin so the swap fires once the hero logo is comfortably
+      // tucked under the sticky nav, not right when its bottom edge crosses zero.
+      { rootMargin: "-24px 0px 0px 0px", threshold: 0 }
+    );
+    io.observe(heroLogo);
+  })();
+</script>
