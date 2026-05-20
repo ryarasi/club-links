@@ -25,75 +25,27 @@ const audiences = [
     body: "Incubators, accelerators, community builders, policy and academia — the connective tissue around founders.",
   },
 ];
-
-const pillars = [
-  {
-    pct: "25%",
-    title: "Innovation",
-    body: "Frontier tech, R&D breakthroughs, deep-tech and dual-use, and what's shipping out of Indian labs and garages.",
-  },
-  {
-    pct: "20%",
-    title: "Fundraising",
-    body: "How rounds get built — angel and seed mechanics, term sheets, valuations, late-stage moves, and what investors are actually paying for.",
-  },
-  {
-    pct: "20%",
-    title: "Product & GTM",
-    body: "Positioning, pricing, distribution, and the early-stage moves that convert a wedge into pull.",
-  },
-  {
-    pct: "20%",
-    title: "Founder & team",
-    body: "Operating craft — hiring, leadership, co-founder dynamics, energy management, and the human side of building.",
-  },
-  {
-    pct: "15%",
-    title: "Ecosystem & policy",
-    body: "Regulation, DPDP, ONDC, India Stack, capital flows, state-level startup policy, and the structural context founders operate in.",
-  },
-];
 ---
 
 <Section
   id="about"
   eyebrow="About"
   title="A community for the people building India's startup ecosystem."
-  intro="The Startup Club exists because the most useful conversations happen between the people doing the work — founders comparing notes, investors sharing pattern-matching, mentors and operators paying forward what they learned. We publish daily across LinkedIn, X, and Instagram so those conversations have a steady home."
+  intro="The Startup Club exists because the most useful conversations happen between the people doing the work — founders comparing notes, investors sharing pattern-matching, mentors and operators paying forward what they learned. Events, video, and daily social are all entry points into the same community."
 >
-  <div class="grid lg:grid-cols-[1fr_1.05fr] gap-10 lg:gap-16">
-    <div>
-      <h3 class="text-xl font-bold tracking-tight">Who it's for</h3>
-      <ul class="mt-4 space-y-3">
-        {audiences.map((a) => (
-          <li class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4 sm:p-5">
-            <div class="font-semibold text-[15.5px]">{a.title}</div>
-            <div class="text-[14.5px] text-[color:var(--color-ink-muted)] leading-relaxed mt-1">{a.body}</div>
-          </li>
-        ))}
-      </ul>
-      <p class="mt-5 text-[14.5px] text-[color:var(--color-ink-muted)]">
-        If any of that sounds like you,
-        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" class="font-semibold">follow The Startup Club on LinkedIn →</a>
-      </p>
-    </div>
-
-    <div>
-      <h3 class="text-xl font-bold tracking-tight">What we publish</h3>
-      <p class="mt-3 text-[15.5px] text-[color:var(--color-ink-muted)] leading-relaxed">
-        Five content pillars, weighted to the questions Indian founders actually wrestle with. The mix is editorial — not a content calendar pinned to product launches — so each week the rhythm reflects what's interesting in the ecosystem.
-      </p>
-      <ol class="mt-5 space-y-4">
-        {pillars.map((p) => (
-          <li class="flex gap-4 rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4 sm:p-5">
-            <div class="text-[13px] font-bold tracking-widest text-[color:var(--color-accent)] pt-0.5 min-w-[3rem]">{p.pct}</div>
-            <div>
-              <div class="font-semibold text-[15.5px]">{p.title}</div>
-              <div class="text-[14.5px] text-[color:var(--color-ink-muted)] leading-relaxed mt-1">{p.body}</div>
-            </div>
-          </li>
-        ))}
-      </ol>
-    </div>
+  <div class="mx-auto max-w-3xl">
+    <h3 class="text-xl font-bold tracking-tight">Who it's for</h3>
+    <ul class="mt-4 grid sm:grid-cols-2 gap-3">
+      {audiences.map((a) => (
+        <li class="rounded-xl border border-[color:var(--color-line)] bg-[color:var(--color-bg-elev)] p-4 sm:p-5">
+          <div class="font-semibold text-[15.5px]">{a.title}</div>
+          <div class="text-[14.5px] text-[color:var(--color-ink-muted)] leading-relaxed mt-1">{a.body}</div>
+        </li>
+      ))}
+    </ul>
+    <p class="mt-6 text-[14.5px] text-[color:var(--color-ink-muted)]">
+      If any of that sounds like you, head back up to find the right way in — watch on YouTube, join a virtual session on Meetup, attend in person via AllEvents, or follow along on
+      <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" class="font-semibold">LinkedIn</a>, X, and Instagram.
+    </p>
   </div>
 </Section>
